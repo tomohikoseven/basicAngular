@@ -1,0 +1,62 @@
+<div>
+Favorite Color(Reactive): <input type="text" [formControl]="favoriteColorControl">
+</div>
+<div>
+Favorite Color(Template): <input type="text" [(ngModel)]="favoriteColor">
+</div>
+<p>Templage:{{favoriteColor}}</p>
+
+<h2>コーヒー品目リスト作成</h2>
+<form [formGroup]="coffeeForm" novalidate>
+  <div>
+    <label>品目：<input formControlName="name"
+                [class.input-valid]="name.valid"
+                [class.input-invalid]="name.invalid"></label>
+  </div>
+  <div>
+    <label>テイスト：<input formControlName="taste" size="50"
+      [class.input-valid]="taste.valid"
+      [class.input-invalid]="taste.invalid"></label>
+  </div>
+  <div>
+    <span *ngFor="let state of hotcoldsel">
+      <input type="radio" formControlName="hotcold" [value]="state">{{state}}
+    </span>
+  </div>
+  <div>
+    <span *ngFor="let item of addssel">
+      <input type="checkbox" (change)="onCheckChanged(item, $event.target.checked)">{{item}}
+    </span>
+  </div>
+  <div>
+    <label>おつまみ：
+      <select formControlName="nut">
+        <option *ngFor="let nut of nutsel" [value]="nut">{{nut}}</option>
+      </select>
+    </label>
+  </div>
+</form>
+
+<p>フォーム入力値:{{ coffeeForm.value | json }}</p>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <!-- <input class="form-control"
+            required minlength="4" [(ngModel)]="name" #inputName="ngModel" >
+
+      <div *ngIf="inputName.invalid && (inputName.dirty || inputName.touched)"
+          class="alert alert-danger">
+
+        <div *ngIf="inputName.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="inputName.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+
+      </div>
+    </div>
+    -->
+  </div>
+</div>
