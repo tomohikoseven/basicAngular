@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormIntroComponent } from './form-intro/form-intro.component';
 import { TopComponent } from './top/top.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormIntroComponent,
-    TopComponent
+    TopComponent,
+    NameEditorComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
