@@ -10,6 +10,7 @@ import { FormIntroComponent } from './form-intro/form-intro.component';
 import { TopComponent } from './top/top.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { FormTemplateComponent } from './form-template/form-template.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
     FormIntroComponent,
     TopComponent,
     NameEditorComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    FormTemplateComponent
   ],
   imports: [
     BrowserModule,
