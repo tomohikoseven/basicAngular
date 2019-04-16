@@ -11,6 +11,7 @@ import { TopComponent } from './top/top.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { FormTemplateComponent } from './form-template/form-template.component';
+import { FormValidatorComponent } from './form-validator/form-validator.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormTemplateComponent } from './form-template/form-template.component';
     TopComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    FormTemplateComponent
+    FormTemplateComponent,
+    FormValidatorComponent
   ],
   imports: [
     BrowserModule,

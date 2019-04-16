@@ -6,6 +6,8 @@ import { TopComponent } from './top/top.component';
 import { FormIntroComponent } from './form-intro/form-intro.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { FormTemplateComponent } from './form-template/form-template.component';
+import { FormValidatorComponent } from './form-validator/form-validator.component';
 
 // routing
 const routes: Routes = [
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'form-intro', component: FormIntroComponent },
   { path: 'name-editor', component: NameEditorComponent },
   { path: 'profile-editor', component: ProfileEditorComponent },
+  { path: 'form-template', component: FormTemplateComponent },
+  { path: 'form-validator', component: FormValidatorComponent },
   { path: '**', component: FormIntroComponent }
 ];
 
